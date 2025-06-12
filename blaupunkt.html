@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Blaupunkt Pop 70</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/blaupunkt.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+
+    <link rel="icon" href="assets/icons/logo.svg" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="scripts/blaupunkt.js" defer></script>
+    <script src="scripts/contact.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo-link">
+        <img class="logo" src="assets/icons/logo.svg" alt="Lara Logo" />
+      </a>
+      <nav class="nav">
+        <a href="https://www.linkedin.com/in/lara-rodrigues-ristic" target="_blank" class="nav-link">LinkedIn</a>
+        <a href="mailto:lrr.lara10@gmail.com" class="nav-link">Email</a>
+        <a href="https://drive.google.com/file/d/1jB3nwc7jVxkklqH-IRYWRjXvvFnmXqO5/view?usp=drive_link" target="_blank" class="nav-link resume-link">Resume</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="project-hero">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img
+                src="assets/photos/blaupunkt2.jpg"
+                alt="Blaupunkt hero image"
+                class="carousel-image"
+              />
+              <img
+                src="assets/photos/blaupunkt3.jpg"
+                alt="Blaupunkt hero image 2"
+                class="carousel-image"
+              />
+              <img
+                src="assets/photos/blaupunkt4.jpg"
+                alt="Blaupunkt hero image 3"
+                class="carousel-image"
+              />
+            </div>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro -->
+      <section class="project-content">
+        <div class="project-main">
+          <h1 class="project-title">Blaupunkt Pop 70 Remake</h1>
+          <p class="project-description">
+            A reinterpretation of the <span class="highlight">iconic Blaupunkt Pop 70 AM/FM Stereo Radio Receiver</span> as a modernised music player prototype.
+          </p>
+
+          <h2>Brief</h2>
+          <p>
+            In collaboration with a classmate, the goal was to reinterpret an iconic object from the past. We chose the Blaupunkt Pop 70, <span class="highlight">aiming to preserve its original space-age aesthetic</span> while imagining how it could exist in today’s world.
+          </p>
+
+          <h2>Outcome</h2>
+          <p>
+            A <span class="highlight">subtle remix of past and present,</span> Pop 70 that stays true to its iconic look, while introducing modern features and a transparent back that connects users to the mechanism behind the interaction.
+          </p>
+        </div>
+
+        <aside class="project-details">
+          <div class="details-info">
+            <p><strong>Project made for</strong><br />Digitally Designed Objects for Fast Prototyping course<br /><span class="highlight">MAInD Interaction Design SUPSI</span></p>
+            <p><strong>Date</strong><br />November 2024</p>
+            <p><strong>Duration</strong><br />3 weeks</p>
+            <p><strong>Roles</strong><br />Fast prototyping, 3D modelling, digital fabrication</p>
+            <p><strong>Tools</strong><br />Fusion360, Prusa Slicer, Rhino7, Laser Cutters</p>
+            <p>
+                <a href="https://www.notion.so/Blaupunkt-Pop-70-AM-FM-Stereo-Radio-Receiver-20e2cd76ff0a815cbe50f6f51c3aa82e?source=copy_link" target="_blank">
+                  More details of the whole process here →
+                </a>
+              </p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Process -->
+      <section class="process-section">
+
+        <!-- prototyping stages -->
+        <section class="process-block">
+          <div class="process-text">
+            <h3 class="process-title">Prototyping stages</h3>
+            <p>
+                <span class="highlight">Sketching & cardboard prototyping</span>
+                <br>Helped determine internal structure and interactions
+            </p>
+            <p>
+                <span class="highlight">Fusion modeling</span>
+                <br>Brought digital precision to component fit and clearances  
+            </p>
+            <p>
+                <span class="highlight">Testing & material iteration</span>
+                <br>Especially for gear smoothness, TPU flexibility, and internal friction reduction
+            </p>
+          </div>
+          <div class="process-media">
+            <img src="assets/photos/blaupunktParts.jpg" alt="Blaupunkt all the parts" />
+            <p class="media-caption">All the parts</p>
+          </div>
+        </section>
+
+        <!-- mechanisms -->
+        <section class="image-section">
+          <h3 class="image-section-title">Main components & mechanisms</h3>
+                  
+          <div class="image-row">
+            <div class="feature-item">
+              <img
+                src="assets/photos/blaupunktClickTurn.jpg"
+                alt="Turning click mechanism"
+                class="feature-image"
+              />
+              <p class="feature-description">
+                <span class="highlight">Turning click mechanism</span>
+              </p>
+              <p class="feature-description">converts rotary motion into button clicks using TPU-flexible pins</p>
+            </div>
+        
+            <div class="feature-item">
+              <img
+                src="assets/photos/blaupunktNeedleMechanism.jpg"
+                alt="Colab matches"
+                class="feature-image"
+              />
+               <p class="feature-description">
+                <span class="highlight">The needle mechanism</span>
+              </p>
+              <p class="feature-description">Shows which song is playing, inspired by bike gears</p>
+            </div>
+
+            <div class="feature-item">
+              <img
+                src="assets/photos/blaupunktSandwitch.png"
+                alt="Sandwitch structure"
+                class="feature-image"
+              />
+
+              <p class="feature-description">
+                <span class="highlight">Layered sandwitch structure</span>
+              </p>
+              <p class="feature-description">Adapted for clicking buttons and speaker structure</p>
+            </div>
+
+          </div>
+        </section>
+
+
+      <!-- interactions -->
+      <section class="image-section">
+        <h3 class="image-section-title">Interactions</h3>
+                
+        <div class="image-row">
+          <div class="feature-item">
+            <img
+              src="assets/photos/blaupunktSpeakerPlug.jpg"
+              alt="Plugging the speaker"
+              class="feature-image"
+            />
+            <p class="media-caption">Speaker plug in</p>
+          </div>
+      
+          <div class="feature-item">
+            <img
+              src="assets/photos/blaupunktOn.jpg"
+              alt="Turning on"
+              class="feature-image"
+            />
+            <p class="media-caption">On/Off switch</p>
+          </div>
+
+          <div class="feature-item">
+            <img
+              src="assets/photos/blaupunktVolume.jpg"
+              alt="Volume up / down"
+              class="feature-image"
+            />
+            <p class="media-caption">Turn the volume up / down</p>
+          </div>
+
+        </div>
+        <div class="image-row">
+            <div class="feature-item">
+              <img
+                src="assets/photos/blaupunktFf.jpg"
+                alt="Fast forward"
+                class="feature-image"
+              />
+              <p class="media-caption">Fast forward 10s in the song</p>
+            </div>
+        
+            <div class="feature-item">
+              <img
+                src="assets/photos/blaupunktRw.jpg"
+                alt="Rewind song 10s"
+                class="feature-image"
+              />
+              <p class="media-caption">Rewind the song 10s</p>
+            </div>
+  
+            <div class="feature-item">
+              <img
+                src="assets/photos/blaupunktSwitch.jpg"
+                alt="Change songs"
+                class="feature-image"
+              />
+              <p class="media-caption">Change songs - next / previous</p>
+            </div>
+  
+          </div>
+  
+      </section>
+
+      <!-- challenges -->
+      <section class="process-block">
+        <div class="process-text">
+          <h3 class="process-title">Overcoming challenges</h3>
+          <ul class="learnings-highlights">
+            <li>Fitting multiple mechanical systems inside a <span class="highlight">compact box</span></li>
+            <li><span class="highlight">Ensuring smooth user experience</span> with click and turn mechanisms</li>
+            <li>Finding the perfect 3D pinting approach to <span class="highlight">achieve the best structure</span></li>
+          </ul>
+        </div>
+      </section>
+    </section>
+
+      <!-- Gallery -->
+        <!-- gallery section -->
+        <section class="gallery-section">
+            <h3 class="gallery-title">Blaupunkt, Reimagined</h3>
+            <p>The Blaupunkt Pop 70 through our lens</p>
+            <div class="gallery-grid">
+                <div class="gallery-row">
+                    <div class="gallery-left1">
+                        <img src="assets/photos/blaupunkt5.jpg" alt="Blaupunkt Pop 70 playful image" />
+                    </div>
+                    <div class="gallery-right2">
+                        <video autoplay muted loop playsinline>
+                            <source src="assets/videos/BlaupunktPop70Video.mp4" type="video/mp4" alt="Blaupunkt interaction video"/>
+                            Your browser does not support the video tag.
+                          </video>
+                    </div>
+                </div>
+                <div class="gallery-row">
+                    <div class="gallery-left2">
+                        <img src="assets/photos/blaupunkt6.jpg" alt="Blaupunkt Pop 70 detail" />
+                    </div>
+                    <div class="gallery-right1">
+                        <img src="assets/photos/blaupunkt7.jpg" alt="Blaupunkt Pop 70 speaker detail" />
+                    </div>
+                </div>
+                <div class="gallery-row">
+                    <div class="gallery-left1">
+                        <img src="assets/photos/blaupunkt8.jpg" alt="Blaupunkt Pop 70 with speaker on top" />
+                    </div>
+                    <div class="gallery-right2">
+                        <img src="assets/photos/blaupunkt9.jpg" alt="Blaupunkt Pop 70 vintage feel" />
+                    </div>
+                </div>
+            </div>
+          </section>
+
+      <!-- Learnings -->
+      <section class="learnings-section">
+        <div class="learnings-text">
+          <h3 class="learnings-title">Learnings</h3>
+          <ul class="learnings-highlights">
+            <li>Smooth physical UX takes serious testing, <span class="highlight">small tolerances make a big difference</span></li>
+            <li>What looks perfect in Fusion doesn't necessarilly work in real life</li>
+            <li>Testing with <span class="highlight">low-fi mockups</span> helps clarify form and interaction</li>
+            <li>Transparent construction not only looks good but it also provides clarity of what is working while prototyping</li>
+            <li><span class="highlight">Making physical things is messy, </span> and that’s part of the joy</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- Contact -->
+      <section class="contact-section" id="contact">
+        <div class="contact-content">
+          <p class="contact-small">Like what you see? Just want to connect?</p>
+          <h2 class="contact-main">Let’s get in touch :)</h2>
+          <p class="contact-email">
+            <button id="copy-email-btn">
+              <span id="email-text">lrr.lara10@gmail.com</span>
+              <img src="assets/icons/copy.svg" alt="Copy Icon" class="copy-icon" />
+            </button>
+            <span id="copy-feedback" class="copy-feedback">Copied!</span>
+          </p>
+          <div class="contact-footer">
+            <div class="contact-icons">
+              <a href="https://www.linkedin.com/in/lara-rodrigues-ristic" target="_blank">
+                <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
+              </a>
+              <!-- <a href="https://www.instagram.com" target="_blank">
+                <img src="assets/icons/instagram.svg" alt="Instagram" />
+              </a> -->
+            </div>
+            <a href="#" class="back-to-top">
+              <img src="assets/icons/back-to-top-hover=false.svg" alt="Back to top" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/icons/logo.svg" alt="Lara Logo" />
+        </a>
+        <div class="footer-text">
+          <p>
+            &copy; 2025 • Designed by me, vibe coded with the power of AI, coffee and friendship
+          </p>
+          <p>(hopefully one day fully polished and mobile compatible)</p>
+          <p>Thanks for scrolling! ✨</p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="playground.html">Playground</a>
+        <a href="about.html">About Me</a>
+      </div>
+    </footer>
+  </body>
+</html>

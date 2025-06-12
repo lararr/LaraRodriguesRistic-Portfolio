@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Dithering Experiments</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/ditheringExperiments.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+    <script src="scripts/contact.js" defer></script>
+    <script src="scripts/ditheringExperiments.js" defer></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="header">
+      <a href="index.html" class="logo-link">
+        <img class="logo" src="assets/icons/logo.svg" alt="Lara Logo" />
+      </a>
+      <nav class="nav">
+        <a href="https://www.linkedin.com/in/lara-rodrigues-ristic" target="_blank" class="nav-link">LinkedIn</a>
+        <a href="mailto:lrr.lara10@gmail.com" class="nav-link">Email</a>
+        <a href="https://drive.google.com/" target="_blank" class="nav-link resume-link">Resume</a>
+      </nav>
+    </header>
+
+    <!-- project content -->
+    <main>
+      <!-- hero section -->
+      <section class="project-hero">
+        <div class="carousel">
+            <div class="carousel-track">
+              <img
+                src="assets/photos/DitheringExp1.jpg"
+                alt="Dithering Experiments image 1"
+                class="carousel-image"
+              />
+              <img
+                src="assets/photos/DitheringExp2.jpg"
+                alt="Dithering Experiments image 2"
+                class="carousel-image"
+              />
+              <img
+                src="assets/photos/DitheringExp3.jpg"
+                alt="Dithering Experiments image 3"
+                class="carousel-image"
+              />
+            </div>
+            <div class="carousel-dots"></div>
+          </div>
+      </section>
+
+      <!-- intro text -->
+      <section class="project-content">
+        <div class="project-main">
+          <h1 class="project-title">Dithering Experiments</h1>
+          <p class="project-description">
+            Dithering Experiments is an
+            <span class="highlight">interactive art installation</span> that mirrors its viewer using a 32×32 LED matrix and a live webcam feed.
+            <br />
+            By switching modes through the keyboard and a mouse, the viewer explores the world of
+            <span class="highlight">real-time image manipulation,</span> computer vision, and pixel-based abstraction.
+          </p>
+      
+          <h2>Brief</h2>
+          <p>
+            This project was created for the course
+            <span class="highlight">Programming Interactive Objects</span> along with a classmate.
+            With no fixed brief, the challenge was to explore creative possibilities using a
+            <span class="highlight">32×32 LED matrix.</span>
+            <br />
+          </p>
+      
+          <h2>Outcome</h2>
+          <p>
+            A playful, pixelated mirror that invites people to
+            <span class="highlight">see differently,</span> and play with pixels.
+            <br />
+            It’s a low-res canvas for exploring
+            <span class="highlight">dithering, edge detection, and pixelation</span> in motion.
+          </p>
+        </div>
+      
+        <aside class="project-details">
+          <!-- <div class="project-badge">
+            This project was developed as part of the<br />
+            <b>MAInD Interaction Design program at SUPSI</b><br />
+            and presented during the final project exhibition day.
+          </div> -->
+      
+          <div class="details-info">
+            <p>
+              <strong>Project made for</strong><br />
+              Programming Interactive Objects course<br />
+              <span class="highlight">MAInD Interaction Design SUPSI</span>
+            </p>
+            <p>
+              <strong>Date</strong><br />
+              January 2025
+            </p>
+            <p>
+              <strong>Duration</strong><br />
+              1 week
+            </p>
+            <p>
+              <strong>Roles</strong><br />
+              Creative coding, interaction design, design exploration
+            </p>
+            <p>
+              <strong>Tools</strong><br />
+              Visual Studio Code, Processing, Arduino IDE
+            </p>
+            <p>
+              <a href="https://www.notion.so/Dithering-experiments-20c2cd76ff0a810ba76cdca58735b59f?source=copy_link" target="_blank">
+                In detail notion page here →
+              </a>
+            </p>
+          </div>
+        </aside>
+      </section>
+      
+      <!-- process section -->
+      <section class="process-section">
+        <!-- Iterations -->
+        <section class="process-block">
+          <div class="process-text">
+            <h3 class="process-title">Iterations</h3>
+            <p>
+              At first, we tried showing the full webcam feed on the LED matrix, but everything turned into a soft blur. So we <span class="highlight">zoomed in, focusing on just a 32×32 crop of the webam feed.</span> This shift gave each pixel more meaning and made the output feel more interesting.
+            </p>
+            <p>
+              We also explored using a distance sensor to <span class="highlight">interactively change the dithering threshold.</span> It was a playful idea, but in practice, the readings were too unstable for a smooth experience, so we let it go.
+            </p>
+          </div>
+          <div class="process-media">
+            <video autoplay loop muted playsinline class="process-video">
+                <source src="assets/videos/ditheringExp-test-distSensor.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+                <p class="media-caption">Testing the distance sensor logic</p>
+          </div>
+        </section>
+      
+        <!-- Dithering styles -->
+        <section class="process-block">
+          <div class="process-text">
+            <h3 class="process-title">Dithering styles</h3>
+            <p>
+              We started with <span class="highlight">Floyd–Steinberg dithering</span> — diffusing pixel error to simulate gradients.
+            </p>
+            <p>
+              Then we moved on to <span class="highlight">Bayer (ordered) dithering</span>. Using 2×2, 4×4, and 8×8 grids, we played with structure and rhythm.
+            </p>
+          </div>
+          <div class="process-media">
+            <img src="assets/photos/ditheringExp-bayer-example.jpg" alt="Bayer dithering demo" />
+            <p class="media-caption">Bayer dithering in action</p>
+          </div>
+        </section>
+      
+        <!-- Edge detection -->
+        <section class="process-block">
+          <div class="process-text">
+            <h3 class="process-title">Edge detection & pixelation</h3>
+            <p>
+              Toward the end, we introduced <span class="highlight">edge detection</span> to highlight form and contrast. We also revisited <span class="highlight">pixelation</span> as a medium in itself. It was about letting the image break apart, and seeing how recognizeable it is.
+            </p>
+          </div>
+          <div class="process-media">
+            <img src="assets/photos/ditheringExp-edgeDetection-example.jpg" alt="Edge detection" />
+            <p class="media-caption">Edge detection in action</p>
+          </div>
+        </section>
+      </section>
+
+            <!-- gallery section -->
+            <section class="gallery-section">
+                <h3 class="gallery-title">Enter the Matrix</h3>
+                <p>A LED-based exploration of light, code, and reality</p>
+                <div class="gallery-grid">
+                    <div class="gallery-row">
+                        <div class="gallery-left1">
+                            <video autoplay muted loop playsinline>
+                                <source src="assets/videos/ditheringExp-gallery-video.mov" type="video/mp4" alt="Matrix video"/>
+                                Your browser does not support the video tag.
+                              </video>
+                        </div>
+                        <div class="gallery-right2">
+                            <img src="assets/photos/ditheringExp-gallery-photo1.jpg" alt="Matrix outcome 1" />
+                        </div>
+                    </div>
+                    <div class="gallery-row">
+                        <div class="gallery-left2">
+                            <img src="assets/photos/ditheringExp-gallery-photo2.jpg" alt="Matrix outcome 2" />
+                        </div>
+                        <div class="gallery-right1">
+                            <img src="assets/photos/ditheringExp-gallery-photo3.jpg" alt="Matrix outcome 3" />
+                        </div>
+                    </div>
+                    <div class="gallery-row">
+                        <div class="gallery-left1">
+                            <img src="assets/photos/ditheringExp-gallery-photo4.jpg" alt="Matrix outcome 4" />
+                        </div>
+                        <div class="gallery-right2">
+                            <img src="assets/photos/ditheringExp-allery-photo5.jpg" alt="Matrix outcome 5" />
+                        </div>
+                    </div>
+                </div>
+              </section>
+                
+      
+      <!-- learnings section -->
+      <section class="learnings-section">
+        <div class="learnings-text">
+          <h3 class="learnings-title">Learnings</h3>
+          <ul class="learnings-highlights">
+            <li><span class="highlight">Less can be more:</span> limiting resolution pushed us to get creative with the output</li>
+            <li>When working with light and a webcam, <span class="highlight">always test in the dark</span> (webcams and dark rooms don’t mix)</li>
+            <li><span class="highlight">Playing with code and image</span> is a great way to learn</li>
+            <li>Interactive art doesn’t need to be complex. <span class="highlight">The most interesting moments came from simple, curious interactions,</span> not from overengineering</li>
+          </ul>
+        </div>
+        <!-- <div class="learnings-photo">
+          
+         <p class="learnings-photo-text">The final 32x32 mirror</p> -->
+        <!-- </div> -->
+      </section>
+
+
+      <!-- contact -->
+      <section class="contact-section" id="contact">
+        <div class="contact-content">
+          <p class="contact-small">Like what you see? Just want to connect?</p>
+          <h2 class="contact-main">Let’s get in touch :)</h2>
+          <p class="contact-email">
+            <button id="copy-email-btn">
+              <span id="email-text">lrr.lara10@gmail.com</span>
+              <img src="assets/icons/copy.svg" alt="Copy Icon" class="copy-icon" />
+            </button>
+            <span id="copy-feedback" class="copy-feedback">Copied!</span>
+          </p>
+
+          <div class="contact-footer">
+            <div class="contact-icons">
+              <a href="https://www.linkedin.com/in/lara-rodrigues-ristic" target="_blank">
+                <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
+              </a>
+              <!-- <a href="https://www.instagram.com" target="_blank">
+                <img src="assets/icons/instagram.svg" alt="Instagram" />
+              </a> -->
+            </div>
+
+            <a href="#" class="back-to-top">
+              <img src="assets/icons/back-to-top-hover=false.svg" alt="Back to top" />
+            </a>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-left">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/icons/logo.svg" alt="Lara Logo" />
+        </a>
+        <div class="footer-text">
+          <p>&copy; 2025 • Designed by me, vibe coded with the power of AI, coffee and friendship</p>
+          <p>(hopefully one day fully polished and mobile compatible)</p>
+          <p>Thanks for scrolling! ✨</p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="playground.html">Playground</a>
+        <a href="about.html">About Me</a>
+      </div>
+    </footer>
+  </body>
+</html>

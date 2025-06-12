@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lara's Portfolio | Virtual Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/gallery.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+
+  <link rel="icon" type="image/png" href="assets/icons/logo.svg" />
+  
+ <!-- Supabase script first -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js" defer></script>
+  <script src="scripts/gallery.js" defer></script>
+  
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo-link">
+          <img class="logo" src="assets/icons/logo.svg" alt="Lara Logo" />
+        </a>
+        <nav class="nav">
+            <a href="index.html"  class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="playground.html" class="nav-link">Playground</a>
+            <a href="about.html" class="nav-link">About Me</a>
+        </nav>
+      </header>
+
+  <main class="gallery-content">
+    <h1 class="gallery-heading">🎨 The Collective Exhibition</h1>
+    <p class="gallery-subheading">A collection of all drawings contributed by visitors. Thanks for being part of this digital museum!</p>
+
+    <div id="gallery-container" class="gallery-grid"></div>
+
+
+  </main>
+
+</body>
+</html>

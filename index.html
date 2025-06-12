@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lara Rodrigues Ristić</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+
+  <link rel="icon" type="image/png" href="assets/icons/logo.svg" />
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+  <!--loader for the page-->
+  <div class="loader">
+    <img src="assets/icons/logo.svg" alt="Lara Logo" class="loader-logo" />
+  </div>
+  
+  
+  <!-- nav bar-->
+  <header class="header">
+    <a href="index.html" class="logo-link">
+      <img class="logo" src="assets/icons/logo.svg" alt="Lara Logo" />
+    </a>    
+    <nav class="nav">
+      <a href="https://www.linkedin.com/in/lara-rodrigues-ristic" target="_blank" class="nav-link"><span>LinkedIn</span></a>
+      <a href="mailto:lrr.lara10@gmail.com" class="nav-link"><span>Email</span></a>
+      <a href="https://drive.google.com/file/d/1jB3nwc7jVxkklqH-IRYWRjXvvFnmXqO5/view?usp=drive_link" target="_blank" class="nav-link resume-link"><span>Resume</span></a>
+    </nav>    
+  </header>
+
+  <!-- hero section-->
+  <main class="hero">
+    <div class="hero-text">
+      <div class="hero-text-outer">
+        <div class="hero-slide-set">
+          <h1>Hello, I’m Lara</h1>
+          <p>I design <span class="highlight">physical and digital products</span> – and a bit of anything life brings my way :)</p>
+        </div>
+        <!-- <div class="hero-slide-set alt">
+          <p>I design interactions with</p>
+          <p class="highlight-badge">curiosity, empathy, and a little bit of fun</p>
+          <p>to make life feel a little nicer.</p>
+        </div> -->
+      </div>
+    </div>
+    
+    
+    
+    
+    
+
+    <section class="folders">
+      <!-- Projects button -->
+      <button class="folder-btn" data-folder="projects">
+        <div class="folder-top">
+          <img src="assets/icons/folder-projects.svg" alt="Projects Folder" />
+        </div>
+        <div class="folder-contents">
+          <img class="img1-projects" src="assets/photos/ToyTales1.jpg" alt="Toy Tales photo" />
+          <img class="img2-projects" src="assets/photos/DitheringExp1.jpg" alt="Dithering experiments photo" />
+        </div>
+      </button>
+      
+       <!-- Playground button -->
+      <button class="folder-btn" data-folder="playground">
+        <div class="folder-top">
+          <img src="assets/icons/folder-playground.svg" alt="Playground Folder" />
+        </div>
+        <div class="folder-contents">
+          <img class="img1-projects" src="assets/photos/Playground1.jpeg" alt="Playground photo 1" />
+          <img class="img2-projects" src="assets/photos/Playground2.jpg" alt="Playground photo 2" />
+        </div>
+      </button>
+
+       <!-- About button -->
+       <button class="folder-btn" data-folder="about">
+        <div class="folder-top">
+          <img src="assets/icons/folder-about.svg" alt="About Me Folder" />
+        </div>
+        <div class="folder-contents">
+          <img class="img1-projects" src="assets/photos/About1.png" alt="About Me photo 1" />
+          <img class="img2-projects" src="assets/photos/About2.png" alt="About Me photo 2" />
+        </div>
+      </button>
+
+    </section>
+  </main>
+
+</body>
+</html>

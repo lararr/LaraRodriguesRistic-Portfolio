@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lara's Portfolio | Playground</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Global CSS -->
+    <!-- <link rel="stylesheet" href="styles/global.css" /> -->
+    <link rel="stylesheet" href="styles/playground.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+  
+    <link rel="icon" type="image/png" href="assets/icons/logo.svg" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js" defer></script>
+    <script src="scripts/playground.js" defer></script>
+    <script src="scripts/contact.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+
+
+    </head>
+
+  <body>
+    <div class="playground-page">
+      <header class="header">
+        <a href="index.html" class="logo-link">
+          <img class="logo" src="assets/icons/logo.svg" alt="Lara Logo" />
+        </a>
+        <nav class="nav">
+          <a href="https://www.linkedin.com/in/lara-rodrigues-ristic" target="_blank" class="nav-link">LinkedIn</a>
+          <a href="mailto:lrr.lara10@gmail.com" class="nav-link">Email</a>
+          <a href="https://drive.google.com/file/d/1jB3nwc7jVxkklqH-IRYWRjXvvFnmXqO5/view?usp=drive_link" target="_blank" class="nav-link resume-link">Resume</a>
+        </nav>
+      </header>
+  
+      <section class="playground-hero">
+        <img src="assets/icons/projects-tab.svg" alt="Playground Tab" class="projects-tab-bg">
+        <a href="index.html" class="projects-tab-text">Playground</a>
+      </section>
+  
+      <main class="playground-content">
+        <section class="playground-intro">
+            <h2>The unfiltered folder</h2>
+            <p>
+              From FabLab experiments to spontaneous side quests, this space is for<br>
+              <span class="highlight">playful ideas, unexpected projects, and random curiosities</span>.
+            </p>
+          </section>
+          
+          
+  
+          <section class="playground-grid">
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <img src="assets/photos/playground/Playground1.svg" alt="Playground image" class="playground-image" />
+                <div class="caption-tag">Dithering images</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <video
+                  class="playground-image"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                >
+                  <source src="assets/photos/playground/playground6.mov" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="caption-tag">Experiment from AI prompt to 3D print</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <img src="assets/photos/playground/playground0.jpg" alt="Playground image" class="playground-image" />
+                <div class="caption-tag">Volunteering that changed how I see the world</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <video
+                  class="playground-image"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                >
+                  <source src="assets/photos/playground/playground5.mov" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="caption-tag">Arduino + led lights -> fun light dance</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <video
+                  class="playground-image"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                >
+                  <source src="assets/photos/playground/playground12.MOV" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="caption-tag">Experiment with led matrix and distance sensor</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <video
+                  class="playground-image"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                >
+                  <source src="assets/videos/playground2.mov" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="caption-tag">Experiment from AI prompt to 3D print</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <img src="assets/photos/playground/playground7.png" alt="Playground image" class="playground-image" />
+                <div class="caption-tag">Data visualisation with multiple animated pixels</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <img src="assets/photos/playground/playground8.png" alt="Playground image" class="playground-image" />
+                <div class="caption-tag">A poster I made</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <img src="assets/photos/playground/playground9.jpg" alt="Playground image" class="playground-image" />
+                <div class="caption-tag">MedBox - interactive medication reminder</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <img src="assets/photos/playground/playground13.JPG" alt="Playground image" class="playground-image" />
+                <div class="caption-tag">Playing with 3D printing waste</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <img src="assets/photos/playground/playground10.jpeg" alt="Playground image" class="playground-image" />
+                <div class="caption-tag">AI generated 3D print</div>
+              </div>
+            </div>            
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <img src="assets/photos/playground/playground11.png" alt="Playground image" class="playground-image" />
+                <div class="caption-tag">The most random product I made</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <img src="assets/photos/playground/playground3.jpg" alt="Playground image" class="playground-image" />
+                <div class="caption-tag">A logo I designed</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <video
+                  class="playground-image"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                >
+                  <source src="assets/photos/playground/playground14.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="caption-tag">Coding sound experiment</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <img src="assets/photos/playground/playground15.jpg" alt="Playground image" class="playground-image" />
+                <div class="caption-tag">Radio Cubo remake</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <img src="assets/photos/playground/playground16.svg" alt="Playground image" class="playground-image" />
+                <div class="caption-tag">A poster I made</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <img src="assets/photos/playground/playground17.jpg" alt="Playground image" class="playground-image" />
+                <div class="caption-tag">A t-shirt graphic I made</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <video
+                  class="playground-image"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                >
+                  <source src="assets/photos/playground/playground18.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="caption-tag">Radio Cubo assembly animation in Fusion</div>
+              </div>
+            </div>
+
+            <div class="playground-item">
+              <div class="playground-card">
+                <img src="assets/photos/playground/playground19.jpg" alt="Playground image" class="playground-image" />
+                <div class="caption-tag">A Fusion remake of FUJIFILM Instax</div>
+              </div>
+            </div>
+
+            
+
+            <!-- Repeat as needed -->
+          </section>
+
+
+          <div class="playground-wrapup">
+            <h3>Want to play more?</h3>
+            <p>Keep scrolling :)</p>
+          </div>
+          
+          
+
+
+        <!-- folders section -->
+        <section class="folders-section">
+          <div class="folders-text">
+            <p class="attention-text">Make sure to check this out!</p>
+            <p class="folders-description">
+              Take a look at my projects or <br> get to know the person behind them.
+            </p>
+          </div>
+        
+          <div class="folders-buttons">
+            <!-- Projects folder -->
+            <button class="folder-btn" data-folder="projects">
+              <div class="folder-top">
+                <img src="assets/icons/folder-full-projects.svg" alt="Projects Folder" />
+              </div>
+              <div class="folder-contents">
+                <img class="img1-projects" src="assets/photos/ToyTales1.jpg" alt="Projects photo 1" />
+                <img class="img2-projects" src="assets/photos/DitheringExp1.jpg" alt="Projects photo 2" />
+              </div>
+            </button>
+        
+            <!-- About Me folder -->
+            <button class="folder-btn" data-folder="about">
+              <div class="folder-top">
+                <img src="assets/icons/folder-full-about.svg" alt="About Me Folder" />
+              </div>
+              <div class="folder-contents">
+                <img class="img1-projects" src="assets/photos/About2.png" alt="About Me photo 1" />
+                <img class="img2-projects" src="assets/photos/About1.png" alt="About Me photo 2" />
+              </div>
+            </button>
+          </div>
+        </section>
+
+          <!--highlights section-->
+  <section class="highlights-section">
+    <div class="highlights-text">
+      <p class="attention-text">Not sure where to next?</p>
+      <h2 class="highlights-heading">Check my projects</h2>
+    </div>
+  
+    <div class="projects-grid">
+      <!-- ToyTales -->
+      <div class="project-card" data-link="toyTales.html">
+        <img src="assets/photos/ToyTales2.jpg" alt="ToyTales" class="project-img">
+        <h3 class="project-title">ToyTales</h3>
+        <!-- <p class="project-desc">An AI-powered storytelling house that brings kid's favourite to life by crafting different tales in different worlds.</p> -->
+        <p class="project-tags">Product Design · Interaction Design</p>
+        <div class="card-icon">
+          <img src="assets/icons/open-new-tab.svg" alt="Open Icon">
+        </div>
+      </div>
+  
+      <!-- Dithering -->
+      <div class="project-card" data-link="ditheringExperiments.html">
+        <img src="assets/photos/DitheringExp1.jpg" alt="Dithering Experiments" class="project-img">
+        <h3 class="project-title">Dithering Experiments</h3>
+        <!-- <p class="project-desc">An interactive art installation that mirrors its viewer through the use of digital image processing techniques.</p> -->
+        <p class="project-tags">Interaction Design · Creative Coding</p>
+        <div class="card-icon">
+          <img src="assets/icons/open-new-tab.svg" alt="Open Icon">
+        </div>
+      </div>
+  
+      <!-- COLAB -->
+      <div class="project-card" data-link="colab.html">
+        <img src="assets/photos/COLAB1.svg" alt="COLAB" class="project-img">
+        <h3 class="project-title">COLAB</h3>
+        <!-- <p class="project-desc">A platform that helps small, impact-driven organisations and freelancers find compatible collaborators.</p>-->
+        <p class="project-tags">UX Design · UI Design</p> 
+        <div class="card-icon">
+          <img src="assets/icons/open-new-tab.svg" alt="Open Icon">
+        </div>
+      </div>
+    </section>
+
+
+  <!-- canvas section -->
+  <section class="canvas-section">
+    <div class="canvas-left">
+      <h2 class="canvas-title">Scrolled this far?</h2>
+      <h3 class="canvas-subtitle">
+        Drop me a drawing!<br>
+        <span>Save it to the shared gallery</span>
+      </h3>
+      <p class="canvas-description">
+        Since I like visiting museums and galleries, let’s create a digital one :)
+      </p>
+    </div>
+  
+      <div class="canvas-area">
+        <div class="canvas-area-left">
+        <canvas id="drawing-canvas" width="800px" height="400px"></canvas>
+       
+        
+        <div class="color-column">
+          <!-- Swatches -->
+          <div class="color-swatch" data-color="#FFD2C0" style="background-color: #FFD2C0;"></div>
+          <div class="color-swatch" data-color="#F49372" style="background-color: #F49372;"></div>
+          <div class="color-swatch" data-color="#B3C2F3" style="background-color: #B3C2F3;"></div>
+          <div class="color-swatch" data-color="#2D5DA1" style="background-color: #2D5DA1;"></div>
+          <div class="color-swatch" data-color="#4A2D1F" style="background-color: #4A2D1F;"></div>
+          </div>
+
+          <div class="tool-column">
+          <!-- Tools -->
+          <button class="icon-button" id="draw-tool" title="Draw">
+            <img src="assets/icons/canvas-draw.svg" alt="Draw" />
+          </button>
+          <button class="icon-button" id="erase-tool" title="Erase">
+            <img src="assets/icons/canvas-erase.svg" alt="Eraser" />
+          </button>
+          <button class="icon-button" id="funky-tool" title="Funky">
+            <img src="assets/icons/canvas-funky.svg" alt="Funky" />
+          </button>
+          <button class="icon-button" id="save-tool" title="Save">
+            <img src="assets/icons/canvas-save.svg" alt="Save" />
+          </button>
+          <button class="icon-button" id="clear-btn" title="Clear">
+            <img src="assets/icons/canvas-trash.svg" alt="Clear" />
+          </button>
+        </div>
+      </div>
+      
+      
+      <a href="gallery.html" class="gallery-btn" > <!-- target="_blank" -->
+        The drawings are here <span class="arrow">→</span>
+      </a>
+      
+      </div>
+    
+      
+  </section>
+      
+  
+  <!-- Contact Section -->
+<section class="contact-section" id="contact">
+  <div class="contact-content">
+    <p class="contact-small">Like what you see? Just want to connect?</p>
+    <h2 class="contact-main">Let’s get in touch :)</h2>
+    <p class="contact-email">
+      <button id="copy-email-btn">
+        <span id="email-text">lrr.lara10@gmail.com</span>
+        <img src="assets/icons/copy.svg" alt="Copy Icon" class="copy-icon">
+      </button>
+      <span id="copy-feedback" class="copy-feedback">Copied!</span>
+    </p>
+    
+
+    <div class="contact-footer">
+      <div class="contact-icons">
+        <a href="https://www.linkedin.com/in/lara-rodrigues-ristic" target="_blank">
+          <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <!-- <a href="https://www.instagram.com" target="_blank">
+          <img src="assets/icons/instagram.svg" alt="Instagram" />
+        </a> -->
+      </div>
+
+      <a href="#" class="back-to-top">
+        <img src="assets/icons/back-to-top-hover=false.svg" alt="Back to top" />
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+      </main>
+
+      <footer class="footer">
+        <div class="footer-left">
+          <a href="index.html" class="footer-logo">
+            <img src="assets/icons/logo.svg" alt="Lara Logo" />
+          </a>
+          <div class="footer-text">
+            <p>&copy; 2025 • Designed by me, vibe coded with the power of AI, coffee and friendship</p>
+            <p>(hopefully one day fully polished and mobile compatible)</p>
+            <p>Thanks for scrolling! ✨</p>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="playground.html">Playground</a>
+          <a href="about.html">About Me</a>
+        </div>
+      </footer>
+    
+      
+    </div>
+
+  </body>
+  </html>
+  

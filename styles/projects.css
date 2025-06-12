@@ -1,0 +1,369 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #f5f5f0;
+  color: #502d19;
+  height: 100%;
+  width: 100vw;
+}
+
+.projects-page {
+  position: fixed; /* or absolute, depending on your preference */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Full viewport */
+  transform: translateY(100%);
+  transform-origin: bottom;
+  z-index: 999; /* Make sure it’s above everything */
+}
+
+.projects-page.folder-enter {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Hero Section and tab */
+.projects-tab-bg {
+  width: 100%;
+  min-width: 11rem;
+  height: 100%;
+}
+
+.projects-tab-text {
+  position: absolute;
+  top: 3.5rem; /* Adjust vertically */
+  left: 10.5rem; /* Adjust horizontally */
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #285bab;
+  z-index: 2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* header {
+    margin-bottom: -projects-tab-bg height;
+  } */
+
+.projects-hero {
+  width: 22%;
+  height: auto;
+  padding-left: 9rem;
+}
+
+/* Intro */
+.projects-intro {
+  padding: 4rem 4rem 0rem 4rem;
+}
+
+.projects-intro h2 {
+  font-size: 1.8rem;
+    font-weight: 300;
+    color: #502d19;
+    margin-bottom: 2rem;
+    max-width: 80%;
+}
+
+.projects-intro .highlight {
+  color: #c7522f;
+}
+
+.projects-intro p {
+  font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #502d19;
+    margin-bottom: 1.2rem;
+    max-width: 50%;
+}
+
+/* Project Grid */
+.projects-grid {
+  padding: 0rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.project-card {
+  position: relative;
+  background-color: #f9f7f4;
+  border-radius: 1.6rem;
+  padding: 0rem;
+  border: #8d776a solid 0.01rem;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 280px;
+}
+
+.card-icon {
+  position: absolute;
+  bottom: 1.1rem;
+  right: 1.1rem;
+  opacity: 0;
+  transform: translate(5px, 5px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.card-icon img {
+  width: 100%;
+  height: auto;
+}
+
+.project-card:hover .card-icon {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.project-img {
+  width: 100%;
+  aspect-ratio: 4/3; /* Ensures consistent image height */
+  object-fit: cover;
+  max-height: 50%;
+  flex-shrink: 0;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  color: #285bab;
+  font-weight: 400;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+}
+
+.project-desc {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.4rem;
+}
+
+.project-tags {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #c7522f;
+  font-weight: 400;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1.4rem;
+  padding-top: 1rem;
+}
+
+/* folders section */
+  
+  .folders-section {
+    width: 100vw;
+    border-top: 0.08rem solid #285bab;
+    padding: 4rem 4rem 0 4rem;
+    margin-top: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-items: center;
+  }
+  
+.folders-text {
+  flex: 1;
+  max-width: 30%;
+}
+
+.attention-text {
+  color: #c7522f;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.folders-description {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #502d19;
+}
+
+.folders-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.folder-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 2; /* Base layer */
+}
+
+.folder-top {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 3; /* On top of everything */
+}
+
+.folder-contents img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(0) scale(0.8);
+  opacity: 0;
+  border-radius: 0.75rem;
+  width: 60%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease;
+  height: auto;
+  pointer-events: none;
+}
+
+.img1-projects {
+  z-index: 0;
+}
+
+.img2-projects {
+  z-index: 1;
+}
+
+
+/* highlights section */
+.highlights-section {
+  width: 100vw;
+  border-top: 0.08rem solid #285bab;
+  padding-top: 4rem;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.highlights-text {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  max-width: 800px;
+  margin-bottom: 1rem;
+}
+
+.highlights-text .attention-text {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #c7522f;
+  margin-bottom: 0.8rem;
+}
+
+.highlights-text .highlights-heading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #502d19;
+}
+
+.highlights-section .projects-grid {
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.08rem solid #285bab;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 1.3rem;
+}
+
+.footer-logo img {
+  height: 3rem;  /* Set a fixed height for the logo */
+  width: auto;   /* Keep aspect ratio */
+}
+
+.footer-text{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #502d19;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: end;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #285bab;
+  font-weight: 300;
+  transition: color 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.footer-links a:hover {
+  color: #c7522f;
+}
+
+
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .folders-section {
+    flex-direction: column;
+  }
+
+  .folders-text {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .folders-buttons {
+    justify-content: center;
+  }
+}

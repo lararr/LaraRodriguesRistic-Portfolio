@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f5f5f0;
+    color: #502d19;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+   /* about page layout */
+.about-page {
+    position: fixed; /* or absolute, depending on your preference */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Full viewport */
+  transform: translateY(100%);
+  transform-origin: bottom;
+  z-index: 999; /* Make sure it’s above everything */
+  }
+  
+  /* GSAP slide-in like Projects */
+  .about-page.folder-enter {
+    transform: translateY(0);
+  opacity: 1;
+  transition: transform 1s ease, opacity 1s ease;
+  }
+
+   /* Hero Section and tab */
+  .projects-tab-bg {
+    width: 100%;
+    min-width: 11rem;
+    height: 100%;
+  }
+  
+  .projects-tab-text {
+    position: absolute;
+    top: 3.5rem; /* Adjust vertically */
+    left: 10rem; /* Adjust horizontally */
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #285bab;
+    z-index: 2;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .about-hero {
+    width: 22%;
+    height: auto;
+    padding-left: 9rem;
+  }
+
+
+  /* about content - text */
+  .about-section {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+    padding: 4rem 4rem 1rem 4rem;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .about-text {
+    width: 55%;
+  }
+  
+  .about-text h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #285bab;
+    margin-bottom: 2rem;
+  }
+  
+  .about-text h2 {
+    font-size: 1.3rem;
+    color: #285bab;
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .highlight {
+    color: #c7522f;
+    font-weight: 500;
+  }
+
+  .hover-heading {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    white-space: nowrap;
+  }
+  
+  .hover-text {
+    overflow: hidden;
+    display: inline-block;
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 0.8s ease, opacity 0.8s ease;
+    color: #285bab;
+  }
+  
+  .hover-heading:hover .hover-text {
+    max-width: 20rem; /* Adjust as needed based on your path text length */
+    opacity: 1;
+  }
+  
+  .filename {
+    display: inline-block;
+    margin-left: 0.2rem;
+  }
+/* hover animation done */
+  
+  .about-text p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #502d19;
+    margin-bottom: 1.2rem;
+  }
+  
+  .about-photo {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 3/4;
+  }
+  
+  .about-photo img {
+    width: 100%;
+    border-radius: 1rem;
+    background-color: #ddd;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: #8d776a solid 0.01rem;
+
+  }
+
+  /*tools strip*/
+  .skills-strip-section {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .skills-strip-section h2 {
+    padding: 0rem 4rem;
+    font-size: 1.3rem;
+    color: #285bab;
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .skills-strip-section-p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #502d19;
+    margin-bottom: 1.2rem;
+    padding: 0rem 4rem;
+  }
+
+  
+  .tools-strip-container {
+    overflow: hidden;
+    width: 100%;
+    border-top: 1px solid #e0ded9;
+    border-bottom: 1px solid #e0ded9;
+    padding: 1rem 0;
+  }
+  
+  .tools-strip {
+    display: flex;
+    white-space: nowrap;
+    will-change: transform;
+  }
+  
+  .tools-strip-content {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.1rem;
+    color: #285bab;
+    font-weight: 300;
+    padding-right: 4rem;
+  }
+  
+  .tools-strip-content span {
+    display: inline-block;
+  }
+    
+  .tools-note {
+    font-size: 0.9rem;
+    color: #8d776a;
+    margin-top: 1rem;
+    font-weight: 300;    
+    padding: 0rem 1rem 1rem 4rem;
+
+  }
+    
+  /* interests section */
+  .interests-chips {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: left;
+  }
+  
+  .chip {
+    color: #502d19;
+    border: 1px solid #502d19;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+
+  .interests-chips .chip {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+  }
+
+.interests-section h2 {
+    padding-left: 0.2rem;
+    font-size: 1rem;
+    color: #c7522f;
+    font-weight: 400;
+    margin-top: 2rem;
+}
+
+.interests-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  gap: 0.8rem;
+}
+
+/* fun facts */
+.fun-facts-section {
+  text-align: left;
+  width: 45%;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    color: #285bab;
+    font-weight: 300;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.fun-fact-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.fun-fact-card {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #c7522f;
+  transform-style: flat;
+  border-radius: 4rem;
+  border: 0.08rem solid #c7522f;
+  width: 100%;
+}
+
+/* Optional soft fade transition fallback */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+
+/* Tablet (below 1024px) */
+@media screen and (max-width: 1024px) {
+  .about-section {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem 4rem 1rem 4rem;
+    width: 100%;
+  }
+
+  .about-text{
+    width: 100%;
+  }
+
+  .about-photo {
+    margin-bottom: 3rem;
+  }
+
+  .about-photo img {
+    max-width: 100%;
+  }
+
+  .interests-section {
+    align-items: center;
+  }
+  .interests-chips {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+
+  .chip {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .tools-note {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  .fun-facts-section{
+    width: 80%;
+  }
+
+  .folders-section {
+    width: 100%;
+  }
+
+  .folders-buttons {
+    margin-top: 4rem;
+  }
+}
+
+/* Mobile (below 600px) */
+@media screen and (max-width: 600px) {
+  .about-section {
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  .about-photo {
+    width: 100%;
+  }
+
+  .about-text h1 {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    width: 100%;
+  }
+
+  .hover-heading {
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .chip {
+    font-size: 0.8rem;
+    padding: 0.9rem 0.9rem;
+    text-align: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tools-strip-content {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .tools-note {
+    font-size: 0.85rem;
+  }
+
+  .fun-facts-section {
+    width: 100%;
+    aspect-ratio: unset;
+  }
+
+  .fun-fact-card {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  .folders-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .folders-section {
+    width: 100vw;
+    border-top: 0.08rem solid #285bab;
+    padding: 4rem 4rem 0 4rem;
+    margin-top: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-items: center;
+  }
+
+  .folders-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem; /* spacing between folders */
+    width: 100%;
+  }
+
+  .folder-btn {
+    width: 100%;
+    margin-bottom: 2rem;
+    align-self: center;
+    padding: 0;
+  }
+
+  .folder-top img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .folder-contents img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .folder-btn {
+    display: block;
+    width: 80%;
+    max-width: 280px;
+  }
+
+  .highlights-section {
+    align-self: center;
+  }
+
+  .projects-grid{
+    align-self: center;
+  }
+
+  .highlights-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .footer-left,
+  .footer-links {
+    width: 100%;
+  }
+}
