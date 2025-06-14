@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener("click", () => {
       const link = card.getAttribute("data-link");
       if (link) {
-        window.open(link, "_blank");
+        //window.open(link, "_blank"); // opens in new tab
+        window.location.href = link; // opens in same tab
       }
     });
   });

@@ -157,8 +157,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "What I bring to a team (besides snacks): calm energy and an open mind",
     "Smart animate in Figma is my guilty pleasure",
     "If I were a shape, I’d be a blob: adaptable, flexible, and always in motion",
-    "I love interactive installations - especially when they involve light",
-    "I enjoy playing board games with friends (even if I usually lose)",
+    "I love interactive installations - especially when they involve lights or music",
+    "I enjoy playing board games with friends (even though I usually lose)",
     "I like doing user flows, overthinking sometimes has its perks",
     "Designing, learning, and occasionally dancing",
   ];
@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // start loop
   flipToNextFact();
-  setInterval(flipToNextFact, 2000);
+  setInterval(flipToNextFact, 5000);
 });
 
 // Ensure GSAP and ScrollTrigger are loaded
