@@ -21,6 +21,7 @@
     height: 3rem;  /* Set a fixed height for the logo */
     width: auto;   /* Keep aspect ratio */
   }
+
   
   .footer-text{
     display: flex;
