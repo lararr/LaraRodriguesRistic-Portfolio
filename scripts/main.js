@@ -36,7 +36,7 @@ window.addEventListener("load", () => {
   // Body fade-in
   gsap.from("body", {
     opacity: 0,
-    duration: 0.4,
+    duration: 0.2,
     ease: "power2.out"
   });
 
