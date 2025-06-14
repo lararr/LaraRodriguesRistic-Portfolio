@@ -11,15 +11,18 @@
     background-color: #f5f5f0;
     color: #502d19;
     overflow: hidden; /* Prevent scrollbars unless absolutely needed */
-    width: 100vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   body {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Use viewport height */
+    /* height: 100vh; 
     width: 100vw;
-    gap: 10rem;
+    gap: 10rem; */
   }
 
     /* Loading */
@@ -29,7 +32,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #f5f5f0; /* Match your page background */
+    background-color: #f5f5f0; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,9 +50,13 @@
     to { transform: rotate(360deg); }
   }
 
+  .header {
+    align-self: top;
+  }
+
   .hero {
     margin: 0;
-    padding: 0;
+    padding: 0rem 4rem 0rem 4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -58,26 +65,11 @@
   
   /* Hero */
   .hero-text {
-    padding-top: 1rem;
-    max-width: 70%;
-    margin: 0rem 4rem 0rem 4rem;
-    align-items: center;
-    height: 70%;
-  }
-  
-  .hero-text-outer {
-    overflow: hidden;
-    position: relative;
-  }
-
-  .hero-slide-set h1,
-  .hero-slide-set p {
     font-size: 2.6rem;
     font-weight: 300;
-    margin: 0;
+    margin: auto 0rem;
     line-height: 1.4;
   }
-
   
   .highlight {
     color: #c7522f;
@@ -96,12 +88,12 @@
   /* Folders */
   .folders {
     display: flex;
-    width: 100%;
-    height: auto;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    align-items: end;
+    height: auto;
     gap: 2rem;
-    padding: 0rem 4rem 0rem 4rem;
   }
   
   .folder-btn {
@@ -112,6 +104,8 @@
     max-width: 100%;
     margin: 0;
     width: 100%;
+    position: relative;
+    overflow: visible;
   }
   
   .folder-btn img {
@@ -121,11 +115,6 @@
     margin: 0;
   }
 
-  .folder-btn {
-    position: relative;
-    z-index: 2;
-  }
-  
   .folder-top {
     position: relative;
     z-index: 2;
@@ -136,7 +125,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 300%;
     pointer-events: none;
     z-index: 1;
   }
@@ -145,13 +134,11 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%) translateY(0) scale(0.8);
+    transform: translateX(-50%) scale(0.85);
     opacity: 0;
     border-radius: 12px;
     width: 60%;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    will-change: transform, opacity;
-
   }
     
   .img1-projects {

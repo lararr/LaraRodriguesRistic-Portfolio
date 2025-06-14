@@ -19,46 +19,69 @@
     });
     gsap.from("body", { opacity: 0, duration: 3, ease: "power2.out" });
   });
+
   
-  // click and animation for folders for pages
+  // hover and animation for folders for pages
   document.addEventListener("DOMContentLoaded", () => {
     console.log("JS loaded!"); // Confirm it's running
+
+    window.addEventListener("resize", () => {
+      document.querySelectorAll(".folder-btn").forEach((folder) => {
+        const images = folder.querySelectorAll(".folder-contents img");
+        const folderTop = folder.querySelector(".folder-top");
+    
+        // Debug line
+        console.log("Window resized, clearing transform styles for:", folder);
+    
+        gsap.set(folderTop, { clearProps: "y" });
+        images.forEach((img) => {
+          gsap.set(img, {
+            clearProps: "x,y,rotate,scale,opacity"
+          });
+        });
+      });
+    });
+    
   
     const folders = document.querySelectorAll(".folder-btn");
   
     folders.forEach((folder) => {
       const folderTop = folder.querySelector(".folder-top");
-      const img1 = folder.querySelector(".img1-projects");
-      const img2 = folder.querySelector(".img2-projects");
+      const images = folder.querySelectorAll(".folder-contents img");
       const folderType = folder.dataset.folder;
   
-      if (!folderTop || !img1 || !img2) {
-        console.log("Missing elements in folder:", folder);
+      if (!folderTop || images.length < 2) {
+        console.log("Missing folder images:", folder);
         return;
       }
   
       // Hover animation
-      folder.addEventListener("mouseenter", () => {
-        const { height, width } = folder.getBoundingClientRect();
-  
-        gsap.to(folderTop, {
-          y: 0.2 * height,
-          duration: 0.4,
-          ease: "power2.out",
-        });
-        gsap.to(img1, {
+    folder.addEventListener("mouseenter", () => {
+      gsap.killTweensOf([folderTop, images[0], images[1]]);
+    
+      // Force reflow to ensure accurate size after resize
+      requestAnimationFrame(() => {
+        const folderTopHeight = folderTop.offsetHeight;
+        const folderTopWidth = folderTop.offsetWidth;
+    
+        // Debug lines
+        console.log("folderTopHeight:", folderTopHeight);
+        console.log("folderTopWidth:", folderTopWidth);
+    
+        gsap.to(images[0], {
           opacity: 1,
-          y: -1.1 * height,
-          x: -0.15 * width,
+          y: -1.1 * folderTopHeight,
+          x: -0.15 * folderTopWidth,
           rotate: -8,
           scale: 0.95,
           duration: 0.5,
           ease: "power2.out",
         });
-        gsap.to(img2, {
+    
+        gsap.to(images[1], {
           opacity: 1,
-          y: -0.9 * height,
-          x: 0.18 * width,
+          y: -0.9 * folderTopHeight,
+          x: 0.18 * folderTopWidth,
           rotate: 8,
           scale: 0.95,
           duration: 0.5,
@@ -66,10 +89,20 @@
           delay: 0.05,
         });
       });
-  
-      folder.addEventListener("mouseleave", () => {
-        gsap.to(folderTop, { y: 0, duration: 0.4, ease: "power2.inOut" });
-        gsap.to([img1, img2], {
+    });
+            
+                  
+    folder.addEventListener("mouseleave", () => {
+      gsap.killTweensOf([folderTop, images[0], images[1]]); // 💥 stop mid-flight
+    
+      setTimeout(() => {
+        gsap.to(folderTop, {
+          y: 0,
+          duration: 0.4,
+          ease: "power2.inOut",
+        });
+    
+        gsap.to(images, {
           opacity: 0,
           y: 0,
           x: 0,
@@ -77,8 +110,12 @@
           scale: 0.85,
           duration: 0.4,
           ease: "power2.inOut",
+          clearProps: "y,rotate,scale,opacity"
         });
-      });
+      }, 50);
+    });
+          
+           
   
       // Click navigation
       folder.addEventListener("click", () => {
