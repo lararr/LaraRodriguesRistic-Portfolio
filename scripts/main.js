@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
   // Loader fade-out
   gsap.to(".loader", {
     opacity: 0,
-    duration: 0.6, // slightly faster
+    duration: 0.2, // slightly faster
     ease: "power2.out",
     onComplete: () => {
       document.querySelector(".loader").style.display = "none";
@@ -36,7 +36,7 @@ window.addEventListener("load", () => {
   // Body fade-in
   gsap.from("body", {
     opacity: 0,
-    duration: 0.8,
+    duration: 0.4,
     ease: "power2.out"
   });
 
