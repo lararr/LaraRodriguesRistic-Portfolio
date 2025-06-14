@@ -20,6 +20,9 @@
   body {
     display: flex;
     flex-direction: column;
+    will-change: opacity;
+    height: 100%;
+    width: 100%;
     /* height: 100vh; 
     width: 100vw;
     gap: 10rem; */
@@ -61,14 +64,17 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    max-width: 1710px;
   }
   
   /* Hero */
   .hero-text {
     font-size: 2.6rem;
     font-weight: 300;
-    margin: auto 0rem;
+    margin: auto 0;
     line-height: 1.4;
+    max-width: 80%;
+    padding: 0 2rem;
   }
   
   .highlight {
@@ -88,25 +94,28 @@
   /* Folders */
   .folders {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    width: 100%;
-    align-items: end;
-    height: auto;
     gap: 2rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1710px; /* Best balance for large screens */
   }
   
   .folder-btn {
+    flex: 1;
+    position: relative;
     background: none;
     border: none;
-    padding: 0;
     cursor: pointer;
-    max-width: 100%;
-    margin: 0;
-    width: 100%;
-    position: relative;
+    padding: 0;
     overflow: visible;
+    max-width: 100%;
+    min-width: 0; /* important to avoid overflow */
+    display: flex;
+    flex-direction: column;
   }
+  
   
   .folder-btn img {
     width: 100%;
@@ -130,25 +139,32 @@
     z-index: 1;
   }
   
-  .folder-contents img {
+  .img-wrapper {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%) scale(0.85);
-    opacity: 0;
-    border-radius: 12px;
-    width: 60%;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
   }
-    
-  .img1-projects {
+  
+  .left-img {
+    z-index: 2;
+  }
+  
+  .right-img {
     z-index: 1;
   }
   
-  .img2-projects {
-    z-index: 0;
+  .img-wrapper img {
+    opacity: 0;
+    width: 60%;
+    max-width: 400px;
+    border-radius: 12px;
+    transform: scale(0.85);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
-    
+      
   /* Responsive */
 /* Base reset & layout (yours) */
 
