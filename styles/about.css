@@ -226,8 +226,11 @@
     padding: 0.5rem 1rem;
     font-size: 1.1rem;
     font-weight: 300;
+    display: inline-block;
+    opacity: 0; /* hidden initially */
+    transform: translateY(20px); /* slight slide */
   }
-
+  
   .interests-chips .chip {
     opacity: 0;
     transform: translateY(20px);

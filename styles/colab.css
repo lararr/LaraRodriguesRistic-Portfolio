@@ -328,12 +328,13 @@
 }
 
 .feature-image {
-  width: 100%;
-  aspect-ratio: 3/4;
-  border-radius: 1rem;
+  display: block;
+  width: auto;
+  height: 45%;
+  font-size: 0; /* hides alt text fallback */
   object-fit: fill;
-  /* border: #8d776a solid 0.01rem; */
   margin-bottom: 0.5rem;
+  align-self: center;
 }
 
 .feature-description {
@@ -466,6 +467,14 @@
     align-items: center;
     align-self: center;
   }
+
+  .feature-item img {
+    width: auto;
+    max-width: 100%;
+    align-items: center;
+    align-self: center;
+  }
+
 
   .image-row {
     flex-direction: column;

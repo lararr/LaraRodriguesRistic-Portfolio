@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "power4.out",
       onComplete: () => {
         page.style.position = "static"; 
+
       }
     });
   });
@@ -135,26 +136,13 @@ gsap.to("#tools-strip", {
 // interests scrol animation
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".interests-chips .chip", {
-  scrollTrigger: {
-    trigger: ".interests-section",
-    start: "top 100%",
-    toggleActions: "play none none none"
-  },
-  opacity: 1,
-  y: 0,
-  duration: 0.1,
-  ease: "power2.out",
-  stagger: 0.10
-});
-
 // animated fun facts
 document.addEventListener("DOMContentLoaded", () => {
   const facts = [
     "I am half Brazilian, half Serbian - and yes, I speak both languages",
     "I used to dance ballet professionally",
     "3D modeling calms me down, but rendering does the exact opposite",
-    "What I bring to a team (besides snacks): calm energy and an open mind",
+    "What I bring to a team (besides snacks and coffee): calm energy and an open mind",
     "Smart animate in Figma is my guilty pleasure",
     "If I were a shape, I’d be a blob: adaptable, flexible, and always in motion",
     "I love interactive installations - especially when they involve lights or music",
@@ -192,36 +180,69 @@ document.addEventListener("DOMContentLoaded", () => {
 // Ensure GSAP and ScrollTrigger are loaded
 gsap.registerPlugin(ScrollTrigger);
 
-// Animate about-section
+// Animate About Text and Photo Immediately on Load
 gsap.from(".about-section .about-text", {
-  scrollTrigger: {
-    trigger: ".about-section",
-    start: "top 80%",
-    toggleActions: "play none none none",
-  },
   opacity: 0,
-  y: 40,
-  duration: 1,
-  ease: "power2.out"
+  y: 20,
+  duration: 0.6,
+  ease: "power2.out",
+  delay: 0.2
+  // console.log("→ DEBUG: About text animated on load")
 });
 
+// animate the about photo to slide in
 gsap.from(".about-photo", {
-  scrollTrigger: {
-    trigger: ".about-photo",
-    start: "top 85%",
-    toggleActions: "play none none none",
-  },
   opacity: 0,
-  x: 40,
-  duration: 1,
-  ease: "power2.out"
+  x: 20,
+  duration: 0.6,
+  ease: "power2.out",
+  delay: 0.4
+  // console.log("→ DEBUG: About photo animated on load")
 });
+
+// Animate the chips (design interests) on load
+gsap.to(".chip", {
+  opacity: 1,
+  y: 0,
+  duration: 0.6,
+  ease: "power2.out",
+  delay: 0.4,
+  stagger: 0.1
+});
+
+
+
+
+// Animate about-section
+// gsap.from(".about-section .about-text", {
+//   scrollTrigger: {
+//     trigger: ".about-section",
+//     start: "top 80%",
+//     toggleActions: "play none none none",
+//   },
+//   opacity: 0,
+//   y: 40,
+//   duration: 1,
+//   ease: "power2.out"
+// });
+
+// gsap.from(".about-photo", {
+//   scrollTrigger: {
+//     trigger: ".about-photo",
+//     start: "top 85%",
+//     toggleActions: "play none none none",
+//   },
+//   opacity: 0,
+//   x: 40,
+//   duration: 1,
+//   ease: "power2.out"
+// });
 
 // Animate design interests
 // gsap.from(".interests-section .chip", {
 //   scrollTrigger: {
 //     trigger: ".interests-section",
-//     start: "top 80%",
+//     start: "top 100%",
 //     toggleActions: "play none none none",
 //   },
 //   opacity: 0,
