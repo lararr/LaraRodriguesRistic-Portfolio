@@ -316,8 +316,8 @@
 
 .image-row {
   display: flex;
-    gap: 1rem;
-    flex-direction: row;
+  gap: 1rem;
+  flex-direction: row;
 }
 
 .feature-item {
