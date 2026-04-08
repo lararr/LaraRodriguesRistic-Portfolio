@@ -106,3 +106,18 @@
 }
 
 
+/* ── Mobile Fixes ───────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .gallery-heading {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .gallery-subheading {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1rem;
+  }
+}

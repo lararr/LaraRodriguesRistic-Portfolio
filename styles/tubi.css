@@ -544,3 +544,98 @@ main {
     text-align: center;
   }
 }
+
+/* ── Critical mobile layout fixes ───────────────────── */
+
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* These were stuck at 80% width from the 1024px breakpoint */
+  .process-text,
+  .process-media,
+  .process-media-no-border {
+    width: 100% !important;
+    text-align: left !important;
+    align-self: stretch;
+  }
+
+  .learnings-text,
+  .learnings-photo {
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .learnings-section {
+    margin: 0 !important;        /* THIS was missing */
+    width: 100% !important;
+    padding: 2rem 1.5rem;
+    flex-direction: column;      /* ensure stacking */
+  }
+  
+  .learnings-text,
+  .learnings-photo {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+  }
+
+  .gallery-section {
+    margin: 0 !important;        /* same fix */
+    padding: 2rem 1.5rem;
+  }
+  
+  .gallery-row {
+    flex-direction: column;
+  }
+  
+  .gallery-left1,
+  .gallery-left2,
+  .gallery-right1,
+  .gallery-right2 {
+    width: 100% !important;
+    aspect-ratio: 4/3;
+  }
+
+  .process-section {
+    margin: 0 !important;
+    padding: 2rem 1.5rem;
+  }
+
+  .project-content {
+    padding: 0 1.5rem !important;
+    margin: 0 !important;
+  }
+
+  .image-row img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Folders section at bottom */
+  .folders-section {
+    width: 100%;
+    padding: 2rem 1.5rem 0;
+    margin-top: 3rem;
+    overflow: hidden;
+  }
+
+  .folders-text {
+    max-width: 100%;
+  }
+
+  .folders-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .folder-btn {
+    width: 100%;
+    max-width: 280px;
+    align-self: center;
+  }
+}

@@ -629,3 +629,185 @@ canvas {
     flex-direction: column;
   }
 }
+
+/* ── Additional Mobile Fixes ────────────────────────── */
+
+@media (max-width: 768px) {
+  .playground-hero {
+    width: 50%;
+    padding-left: 0;
+  }
+
+  .projects-tab-text {
+    left: 2rem;
+    top: 2rem;
+    font-size: 1rem;
+  }
+
+  .playground-intro {
+    padding: 2rem 1.5rem 0;
+  }
+
+  .playground-intro h2 {
+    font-size: 1.4rem;
+    max-width: 100%;
+  }
+
+  .playground-intro p {
+    max-width: 100%; /* fixes the 50% column bottleneck */
+    font-size: 1rem;
+  }
+
+  .playground-grid {
+    padding: 1.5rem;
+  }
+
+  .canvas-left {
+    max-width: 100%;
+  }
+
+  .folders-section {
+    padding: 2rem 1.5rem 0;
+    margin-top: 3rem;
+  }
+
+  .folders-text {
+    max-width: 100%;
+  }
+
+  .highlights-text {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* ── Folders section mobile fix ─────────────────────── */
+
+@media (max-width: 768px) {
+  .folders-section {
+    width: 100%;        /* not 100vw — that causes horizontal overflow */
+    padding: 2rem 1.5rem 0;
+    margin-top: 3rem;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .folders-text {
+    max-width: 100%;
+  }
+
+  .folders-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .folder-btn {
+    width: 100%;
+    max-width: 280px;
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .playground-intro {
+    padding: 2rem 1.5rem 0;
+  }
+  .playground-intro h2 {
+    max-width: 100%;
+  }
+  .playground-intro p {
+    max-width: 100%;
+  }
+  .canvas-section {
+    padding: 2rem 1.5rem 0;
+  }
+  .canvas-area-left {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .canvas-left {
+    max-width: 100%;
+  }
+  canvas {
+    width: 100% !important;
+    height: 50vw !important;
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .playground-hero {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .folders-section {
+    width: 100% !important;      /* kill the 100vw overflow */
+    overflow-x: hidden;
+    padding: 2rem 1.5rem 0 !important;
+  }
+
+  .folders-buttons {
+    flex-direction: column !important;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .folders-buttons .folder-btn {
+    width: 100% !important;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .folders-buttons .folder-top img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+}
+
+/* ── Mobile folder section fix ───────────────────────── */
+@media (max-width: 768px) {
+  .folders-section {
+    width: 100% !important;
+    /* NO overflow hidden — it clips the flying photos */
+    padding: 2rem 1.5rem 0 !important;
+    margin-top: 3rem;
+    flex-direction: column;
+  }
+
+  .folders-text {
+    max-width: 100%;
+  }
+
+  .folders-buttons {
+    flex-direction: column !important;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .folders-buttons .folder-btn {
+    width: 100%;
+    max-width: 290px;
+    margin: auto;
+    overflow: visible; /* allow photos to fly out */
+  }
+
+  .folders-buttons .folder-top img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Make sure photos are NOT hidden */
+  .folders-buttons .folder-contents {
+    display: block;
+  }
+}

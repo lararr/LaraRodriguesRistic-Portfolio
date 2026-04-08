@@ -487,3 +487,111 @@
     width: 100%;
   }
 }
+
+/* ── Additional Mobile Fixes ────────────────────────── */
+
+@media (max-width: 768px) {
+  .about-hero {
+    width: 50%;
+    padding-left: 0;
+  }
+
+  .projects-tab-text {
+    left: 2rem;
+    top: 2rem;
+    font-size: 1rem;
+  }
+
+  .about-section {
+    padding: 2rem 1.5rem 1rem;
+    gap: 2rem;
+  }
+
+  .skills-strip-section h2 {
+    padding: 0 1.5rem;
+  }
+
+  .skills-strip-section-p {
+    padding: 0 1.5rem;
+  }
+
+  .tools-note {
+    padding: 0 1rem 1rem 1.5rem;
+  }
+
+  .interests-chips {
+    flex-wrap: wrap; /* stops chips overflowing off screen */
+  }
+
+  .folders-section {
+    padding: 2rem 1.5rem 0;
+    margin-top: 3rem;
+  }
+}
+
+/* ── Folders section mobile fix ─────────────────────── */
+
+@media (max-width: 768px) {
+  .folders-section {
+    width: 100%;        /* not 100vw — that causes horizontal overflow */
+    padding: 2rem 1.5rem 0;
+    margin-top: 3rem;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .folders-text {
+    max-width: 100%;
+  }
+
+  .folders-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .folder-btn {
+    width: 100%;
+    max-width: 280px;
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .folders-section {
+    width: 100% !important;      /* kill the 100vw overflow */
+    overflow-x: hidden;
+    padding: 2rem 1.5rem 0 !important;
+  }
+
+  .folders-buttons {
+    flex-direction: column !important;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .folders-buttons .folder-btn {
+    width: 100% !important;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .folders-buttons .folder-top img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Hide the preview photos inside sub-page folder buttons on mobile */
+  .folders-buttons .folder-contents {
+    display: none;
+  }
+}

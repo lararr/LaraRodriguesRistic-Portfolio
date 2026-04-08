@@ -116,3 +116,25 @@
   .back-to-top:hover {
     background-color: #285bab; /* Your accent color */
   }
+
+  /* ── Responsive Contact ─────────────────────────────── */
+
+@media (max-width: 768px) {
+  .contact-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .contact-main {
+    font-size: 1.3rem;
+  }
+
+  #copy-email-btn {
+    font-size: 1.1rem;
+  }
+
+  .contact-footer {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

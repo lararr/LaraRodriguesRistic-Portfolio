@@ -1,45 +1,45 @@
-  /* Header */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 4rem 1rem 4rem;
-    max-width: 100%;
-    border-bottom: 0.08rem solid #285bab;
-  }
-  
-  .logo-link {
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  .logo {
-    height: 2.5rem;
-  }
-  
-  
-  .nav {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-  }
-  
-  .nav-link {
-    font-weight: 300;
-    color: #285bab;
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 4rem;
-    border: 0.08rem solid transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: color 0.3s ease, border-color 0.3s ease;
-    will-change: transform, opacity, color, border-color;
-  }
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem 1rem 4rem;
+  max-width: 100%;
+  border-bottom: 0.08rem solid #285bab;
+}
 
-  .nav-link:hover {
+.logo-link {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.logo {
+  height: 2.5rem;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-weight: 300;
+  color: #285bab;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4rem;
+  border: 0.08rem solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  will-change: transform, opacity, color, border-color;
+  text-decoration: none;
+}
+
+.nav-link:hover {
   border-color: #285bab;
 }
 
@@ -47,12 +47,47 @@
   border-color: #c7522f;
   color: #c7522f;
 }
-  
-  .nav a {
-    text-decoration: none;
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav .resume-link {
+  color: #c7522f;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 1.5rem;
   }
-  
-  .nav .resume-link {
-    color: #c7522f;
+
+  .nav {
+    gap: 0.8rem;
   }
-  
+
+  .nav-link {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.8rem 1rem;
+  }
+
+  .logo {
+    height: 2rem;
+  }
+
+  .nav {
+    gap: 0.3rem;
+  }
+
+  .nav-link {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.45rem;
+  }
+}

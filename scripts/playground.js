@@ -261,34 +261,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Animate the folders in the folders section
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("JS loaded!");
-
   const folders = document.querySelectorAll(".folder-btn");
+  const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+
+  let userHasScrolled = false;
+  window.addEventListener("scroll", () => { userHasScrolled = true; }, { once: true, passive: true });
 
   folders.forEach((folder) => {
-    const folderTop = folder.querySelector(".folder-top img");
-    const img1 = folder.querySelector(".img1-projects");
-    const img2 = folder.querySelector(".img2-projects");
+    const folderTop  = folder.querySelector(".folder-top img");
+    const img1       = folder.querySelector(".img1-projects");
+    const img2       = folder.querySelector(".img2-projects");
     const folderType = folder.dataset.folder;
 
-    if (!folderTop || !img1 || !img2) {
-      console.log("Missing elements in folder:", folder);
-      return;
-    }
+    if (!folderTop || !img1 || !img2) return;
 
-    // Hover animation
-    folder.addEventListener("mouseenter", () => {
+    function openFolder() {
       const { height, width } = folder.getBoundingClientRect();
-
-      // Scale folder top vertically
       gsap.to(folderTop, {
-        scaleY: 0.85, // Reduce height by 15%
-        transformOrigin: "bottom center", // Scale from bottom
+        scaleY: 0.85,
+        transformOrigin: "bottom center",
         duration: 0.4,
         ease: "power2.out",
       });
-
-      // Images hover animation
       gsap.to(img1, {
         opacity: 1,
         y: -0.3 * height,
@@ -308,32 +302,45 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power4.out",
         delay: 0.05,
       });
-    });
+    }
 
-    // Reset on mouse leave
-    folder.addEventListener("mouseleave", () => {
-      gsap.to(folderTop, {
-        scaleY: 1,
-        duration: 0.4,
-        ease: "power2.inOut",
-      });
+    function closeFolder() {
+      gsap.to(folderTop, { scaleY: 1, duration: 0.4, ease: "power2.inOut" });
       gsap.to([img1, img2], {
-        opacity: 0,
-        y: 0,
-        x: 0,
-        rotate: 0,
-        scale: 0.85,
-        duration: 0.4,
-        ease: "power2.inOut",
+        opacity: 0, y: 0, x: 0, rotate: 0, scale: 0.85,
+        duration: 0.4, ease: "power2.inOut",
       });
+    }
+
+    // Desktop: hover opens and closes
+    folder.addEventListener("mouseenter", () => {
+      if (isMobile()) return;
+      openFolder();
     });
 
-    // Click navigation
-    folder.addEventListener("click", () => {
-      if (folderType) {
-        window.location.href = `${folderType}.html`;
-      }
+    folder.addEventListener("mouseleave", () => {
+      if (isMobile()) return;
+      closeFolder();
     });
+
+    // Click navigates on both
+    folder.addEventListener("click", () => {
+      if (folderType) window.location.href = `${folderType}.html`;
+    });
+
+    // Mobile: scroll into view → open, auto-close after 1.4s
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!isMobile() || !userHasScrolled) return;
+          if (entry.isIntersecting) {
+            openFolder();
+            setTimeout(() => closeFolder(), 1400);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+    observer.observe(folder);
   });
 });
-

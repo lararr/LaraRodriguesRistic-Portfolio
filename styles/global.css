@@ -220,4 +220,88 @@
     max-width: 100%;
   }
 }
+
+/* ── Mobile Homepage Fixes ─────────────────────────── */
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  html, body {
+    overflow-y: auto; /* Allow scroll when folders stack vertically */
+  }
+
+  .hero {
+    padding: 0 1.5rem 2rem;
+    height: auto; /* Don't lock to viewport height on mobile */
+  }
+
+  .hero-text {
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    max-width: 100%;
+  }
+
+  .folders {
+    padding: 0 1.5rem 2rem;
+  }
+}
+
+/* Small phone (≤ 480px) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 0 1rem 2rem;
+  }
+
+  .hero-text {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+  }
+
+  .folders {
+    gap: 1.5rem;
+  }
+
+  .folder-btn {
+    width: 85%;
+    max-width: 320px;
+  }
+}
     
+/* ── Mobile homepage fixes ─────────────────────────── */
+
+@media (max-width: 768px) {
+  html, body {
+    overflow-y: auto;
+  }
+
+  .hero {
+    padding: 0 1.5rem 0;
+    min-height: 100svh;  /* fills the screen — folders pushed to bottom */
+    min-height: 100vh;   /* fallback for older iOS */
+    height: auto;
+    justify-content: space-between; /* text top, folders bottom */
+  }
+
+  .hero-text {
+    font-size: 1.8rem;
+    padding: 2rem 0;
+    max-width: 100%;
+  }
+
+  /* Fix: text was overflowing because of white-space: nowrap */
+  .highlight {
+    white-space: normal;
+  }
+
+  .folders {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 0;
+    width: 100%;
+  }
+
+  .folder-btn {
+    width: 80%;
+    max-width: 320px;
+  }
+}

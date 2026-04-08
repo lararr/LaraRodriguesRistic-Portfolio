@@ -1,53 +1,76 @@
-/* footer */
+
+
+  /* footer */
 .footer {
-    width: 100%;
-    padding: 2rem 4rem;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.08rem solid #285bab;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.footer-logo img {
+  height: 3rem;
+  width: auto;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #502d19;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: flex-end;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #285bab;
+  font-weight: 300;
+  transition: color 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.footer-links a:hover {
+  color: #c7522f;
+}
+
+/* ── Mobile ─────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
     align-items: center;
-    border-top: 0.08rem solid #285bab;
-  }
-  
-  .footer-left {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    gap: 1.3rem;
-  }
-  
-  .footer-logo img {
-    height: 3rem;  /* Set a fixed height for the logo */
-    width: auto;   /* Keep aspect ratio */
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
   }
 
-  
-  .footer-text{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    justify-content: space-between;
-    font-size: 0.75rem;
-    color: #502d19;
+  .footer-left {
+    flex-direction: column;  /* stack logo above text */
+    align-items: center;
+    gap: 0.6rem;
   }
-  
+
+  .footer-text {
+    text-align: center;
+  }
+
   .footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    align-items: end;
+    align-items: center;
   }
-  
-  .footer-links a {
-    text-decoration: none;
-    color: #285bab;
-    font-weight: 300;
-    transition: color 0.3s ease;
-    font-size: 0.8rem;
-  }
-  
-  .footer-links a:hover {
-    color: #c7522f;
-  }
-  
+}
