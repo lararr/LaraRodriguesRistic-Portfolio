@@ -137,4 +137,10 @@
     flex-direction: column;
     gap: 1.5rem;
   }
+
+  .contact-footer {
+    flex-direction: row;          /* keep them on the same line */
+    justify-content: space-between; /* linkedin left, arrow right */
+    align-items: center;
+  }
 }

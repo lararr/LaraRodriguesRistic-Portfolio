@@ -197,97 +197,29 @@
 
 
 /* Phone-sized layout */
-@media (max-width: 600px) {
-  .hero-slide-set h1,
-  .hero-slide-set p {
-    font-size: 1.8rem;
-    line-height: 1.4;
-  }
-
-  .highlight-badge {
-    font-size: 1.4rem;
-    padding: 0.3rem 0.6rem 0.4rem;
-    margin-top: 0.5rem;
-  }
-
-  .folders {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .folder-btn {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-/* ── Mobile Homepage Fixes ─────────────────────────── */
-
-/* Tablet (≤ 768px) */
 @media (max-width: 768px) {
   html, body {
-    overflow-y: auto; /* Allow scroll when folders stack vertically */
-  }
-
-  .hero {
-    padding: 0 1.5rem 2rem;
-    height: auto; /* Don't lock to viewport height on mobile */
-  }
-
-  .hero-text {
-    font-size: 2rem;
-    padding: 1.5rem 0;
-    max-width: 100%;
-  }
-
-  .folders {
-    padding: 0 1.5rem 2rem;
-  }
-}
-
-/* Small phone (≤ 480px) */
-@media (max-width: 480px) {
-  .hero {
-    padding: 0 1rem 2rem;
-  }
-
-  .hero-text {
-    font-size: 1.6rem;
-    padding: 1rem 0;
-  }
-
-  .folders {
-    gap: 1.5rem;
-  }
-
-  .folder-btn {
-    width: 85%;
-    max-width: 320px;
-  }
-}
-    
-/* ── Mobile homepage fixes ─────────────────────────── */
-
-@media (max-width: 768px) {
-  html, body {
-    overflow-y: auto;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    height: 100% !important; /* keep height so hero can stretch */
   }
 
   .hero {
     padding: 0 1.5rem 0;
-    min-height: 100svh;  /* fills the screen — folders pushed to bottom */
-    min-height: 100vh;   /* fallback for older iOS */
+    min-height: calc(100vh - 65%);
     height: auto;
-    justify-content: space-between; /* text top, folders bottom */
+    justify-content: space-between;
+    max-width: 100%;
   }
 
   .hero-text {
     font-size: 1.8rem;
-    padding: 2rem 0;
+    padding: 40% 1.5rem 50% 1.5rem;
+    margin: 0 !important;
     max-width: 100%;
+    line-height: 1.4;
   }
 
-  /* Fix: text was overflowing because of white-space: nowrap */
   .highlight {
     white-space: normal;
   }
@@ -295,13 +227,13 @@
   .folders {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    padding-bottom: 0;
+    gap: 0.8rem;
     width: 100%;
+    padding: 2rem 1.5rem 0 !important;
   }
 
   .folder-btn {
-    width: 80%;
-    max-width: 320px;
+    width: 100%;
+    max-width: 400px
   }
 }

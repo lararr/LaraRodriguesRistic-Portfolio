@@ -574,4 +574,14 @@ main {
     max-width: 280px;
     align-self: center;
   }
+
+  .process-media img,
+  .process-media video,
+  .process-media-features img,
+  .process-media-features video {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
 }
+

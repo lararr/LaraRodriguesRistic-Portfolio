@@ -798,5 +798,24 @@ font-weight: 500;
   padding-left: 0 !important;
 }
 
+.prototype-summary {
+  margin-top: 2.5rem !important;
+  padding: 1.5rem !important;
+}
+
+.first-prototype-section,
+.second-prototype-section {
+  gap: 1.5rem;
+}
+
+.image-section {
+  margin-top: 1.5rem;
+}
+
+/* More breathing room between image rows */
+.image-row + .image-row {
+  margin-top: 1.5rem;
+}
+
 }
 
