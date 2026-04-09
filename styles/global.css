@@ -197,25 +197,24 @@
 
 
 /* Phone-sized layout */
-
 @media (max-width: 768px) {
   html, body {
     overflow-y: auto !important;
     overflow-x: hidden;
-    height: 100% !important;
+    height: 100% !important; /* keep height so hero can stretch */
   }
 
   .hero {
     padding: 0 1.5rem 0;
-    min-height: calc(100vh - 65px); /* 65px = header height */
-    height: auto;
+    min-height: calc(100vh - 65%);
+    height: 100%;
     justify-content: space-between;
     max-width: 100%;
   }
 
   .hero-text {
-    font-size: 1.6rem;  /* slightly smaller so it never takes too much space */
-    padding: 1.5rem 0 0 0;
+    font-size: 1.8rem;
+    padding: 40% 1.5rem 50% 1.5rem;
     margin: 0 !important;
     max-width: 100%;
     line-height: 1.4;
@@ -228,13 +227,13 @@
   .folders {
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
     width: 100%;
-    padding: 0 0 0 0;
+    padding: 2rem 1.5rem 0 !important;
   }
 
   .folder-btn {
-    width: 85%;
-    max-width: 360px;
+    width: 100%;
+    max-width: 400px
   }
 }
