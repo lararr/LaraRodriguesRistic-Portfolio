@@ -1,0 +1,449 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: #f5f5f0;
+    color: #502d19;
+    max-width: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* ── Hero / Carousel ── */
+  .project-hero {
+    max-width: 100%;
+    padding: 2rem 12rem;
+    max-height: 100vh;
+  }
+  
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.2rem;
+    border: #8d776a solid 0.01rem;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.6s ease;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    max-height: 95vh;
+    flex: 0 0 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 2;
+  }
+  
+  .carousel-dots button {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-dots button.active {
+    background-color: #285bab;
+  }
+  
+  /* ── Intro section ── */
+  .project-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3rem;
+    margin: 0rem 10rem;
+    max-width: 100%;
+  }
+  
+  .project-main {
+    max-width: 50%;
+    padding-top: 2rem;
+  }
+  
+  .project-title {
+    font-size: 2.3rem;
+    color: #285bab;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+  
+  .project-main p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #502d19;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .highlight {
+    color: #c7522f;
+    font-weight: 500;
+  }
+  
+  .project-details {
+    max-width: 40%;
+    font-size: 1rem;
+    color: #502d19;
+    padding-top: 5rem;
+  }
+  
+  .details-info p {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+  }
+  
+  /* ── Process section ── */
+  .process-section {
+    margin: 0rem 8rem;
+    padding: 4rem 0rem;
+    background-color: #f5f5f0;
+    border-top: 0.08rem solid #285bab;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    max-width: 100%;
+  }
+  
+  .process-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  
+  .process-text {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding-top: 1rem;
+  }
+  
+  .process-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #285bab;
+    margin-bottom: 1rem;
+  }
+  
+  .process-text p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #502d19;
+    margin-bottom: 1.2rem;
+  }
+  
+  /* ── Brand palette dots ── */
+  .brand-palette {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+    flex-wrap: wrap;
+  }
+  
+  .palette-dot {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 0.08rem solid rgba(141, 119, 106, 0.3);
+    display: inline-block;
+    transition: transform 0.2s ease;
+    cursor: default;
+  }
+  
+  .palette-dot:hover {
+    transform: scale(1.25);
+  }
+  
+  /* ── Brand sheet image ── */
+  .process-media {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .process-media img {
+    width: 100%;
+    border-radius: 3rem;
+    border: #8d776a solid 0.01rem;
+    display: block;
+  }
+  
+  .media-caption {
+    font-size: 0.8rem;
+    color: #285bab;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  
+  /* ── Folders section — copied from projects.css ── */
+  .folders-section {
+    width: 100vw;
+    border-top: 0.08rem solid #285bab;
+    padding: 4rem 4rem 0 4rem;
+    margin-top: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .folders-text {
+    flex: 1;
+    max-width: 30%;
+  }
+  
+  .attention-text {
+    color: #c7522f;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+  
+  .folders-description {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #502d19;
+  }
+  
+  .folders-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .folder-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+  }
+  
+  .folder-top {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .folder-contents img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(0) scale(0.8);
+    opacity: 0;
+    border-radius: 0.75rem;
+    width: 60%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+    height: auto;
+    pointer-events: none;
+  }
+  
+  .img1-projects { z-index: 0; }
+  .img2-projects { z-index: 1; }
+  
+  
+  /* ════════════════════════════════════════════
+     RESPONSIVE — single block per breakpoint
+     ════════════════════════════════════════════ */
+  
+  /* ── Tablet (≤ 1024px) ── */
+  @media (max-width: 1024px) {
+    .project-hero {
+      padding: 2rem 4rem;
+    }
+  
+    .project-content {
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0 4rem;
+    }
+  
+    .project-main,
+    .project-details {
+      max-width: 100%;
+      padding: 0;
+    }
+  
+    .process-section {
+      margin: 0 2rem;
+    }
+  
+    .process-block {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .process-text,
+    .process-media {
+      width: 100%;
+    }
+  
+    .folders-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .folders-text {
+      max-width: 100%;
+    }
+  
+    .folders-buttons {
+      width: 100%;
+    }
+  }
+  
+  /* ── Mobile (≤ 768px) ── */
+  @media (max-width: 768px) {
+    body {
+      height: auto;
+      min-height: 100vh;
+    }
+  
+    .project-hero {
+      padding: 1rem;
+    }
+  
+    .project-content {
+      padding: 0 1.5rem;
+      margin: 0;
+      gap: 1.5rem;
+    }
+  
+    .project-title {
+      font-size: 1.8rem;
+      padding: 2rem 0;
+    }
+  
+    /* Key fix: removes the 5rem desktop gap when sidebar stacks below text */
+    .project-details {
+      padding-top: 0;
+      padding-bottom: 2rem;
+    }
+  
+    .details-info p {
+      padding-left: 0;
+    }
+  
+    .process-section {
+      margin: 0;
+      padding: 2rem 1.5rem;
+      gap: 2.5rem;
+    }
+  
+    .process-text,
+    .process-media {
+      width: 100%;
+    }
+  
+    /* Smaller radius at mobile scale */
+    .process-media img {
+      border-radius: 0.8rem;
+    }
+  
+    .process-title {
+      font-size: 1.2rem;
+    }
+  
+    .process-text p,
+    .project-main p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  
+    .carousel-image {
+      height: auto;
+      max-height: none;
+    }
+  
+    /* Folders */
+    .folders-section {
+      flex-direction: column;
+      padding: 2rem 1.5rem 0;
+      margin-top: 3rem;
+      width: 100%;
+      overflow: hidden;
+    }
+  
+    .folders-text {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+  
+    .folders-buttons {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 1.5rem;
+    }
+  
+    .folder-btn {
+      width: 100%;
+      max-width: 280px;
+      align-self: center;
+    }
+  
+    .contact-section {
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+  
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+  
+    .footer-left,
+    .footer-links {
+      width: 100%;
+    }
+  }
