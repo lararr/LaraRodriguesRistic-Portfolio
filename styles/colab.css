@@ -259,11 +259,9 @@
   
   .process-media video {
     width: 100%;
-    border-radius: 1rem;
-    border: #8d776a solid 0.01rem;
-    margin-bottom: 0.6rem;
-    aspect-ratio: 1/1;
-    object-fit: cover;
+  border-radius: 1rem;
+  border: #8d776a solid 0.01rem;
+  margin-bottom: 0.6rem;
   }
   
   .process-media-features video {
@@ -329,8 +327,8 @@
 
 .feature-image {
   display: block;
-  width: auto;
-  height: 45%;
+  width: 50%;
+  gap: 1rem;
   font-size: 0; /* hides alt text fallback */
   object-fit: fill;
   margin-bottom: 0.5rem;
