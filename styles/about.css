@@ -256,6 +256,8 @@
 .fun-facts-section {
   text-align: center;
   width: 45%;
+  display: flex;
+  justify-content: center;
 }
 
 .section-title {
@@ -273,13 +275,14 @@
 
 .fun-fact-card {
   display: inline-block;
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   font-size: 1.3rem;
   font-weight: 300;
-  color: #c7522f;
+  color: #ffffff;                      /* ← was #c7522f, now white */
+  background-color: #c7522f;           /* ← add this line, orange fill */
   transform-style: flat;
   border-radius: 4rem;
-  border: 0.08rem solid #c7522f;
+  border: 0.08rem solid #c7522f;       /* ← keep as-is, same thin border */
   width: 100%;
 }
 

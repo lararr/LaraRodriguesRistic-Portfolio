@@ -147,14 +147,14 @@ gsap.registerPlugin(ScrollTrigger);
 // animated fun facts
 document.addEventListener("DOMContentLoaded", () => {
   const facts = [
-    "I am half Brazilian, half Serbian - and yes, I speak both languages",
+    "I am half Brazilian, half Serbian <br> and yes, I speak both languages",
     "I used to dance ballet professionally",
     "3D modeling calms me down",
-    "What I bring to a team (besides snacks and coffee): calm energy and an open mind",
+    "What I bring to the team (besides snacks and coffee): <br>calm energy and an open mind",
     "Smart animate in Figma is my guilty pleasure",
-    "If I were a shape, I’d be a blob: adaptable, flexible, and always in motion",
-    "I love interactive installations, especially when they involve lights or music",
-    "I enjoy playing board games with friends (even though I usually loose)",
+    "If I were a shape, I’d be a blob. <br> Adaptable, flexible, and always moving around",
+    "I love interactive installations, <br> especially when they involve lights or music",
+    "I enjoy playing board games with friends <br> (even though I usually loose)",
     "Designing, learning, and occasionally dancing",
   ];
 
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
       duration: 0.4,
       ease: "power1.in",
       onComplete: () => {
-        card.textContent = facts[index];
+        card.innerHTML = facts[index];
         gsap.set(card, { rotationX: -90 });
         gsap.to(card, {
           rotationX: 0,
