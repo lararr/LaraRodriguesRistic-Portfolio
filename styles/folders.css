@@ -1,0 +1,114 @@
+/* folders section */
+.folders-section {
+  width: 100vw;
+  border-top: 0.08rem solid #285bab;
+  padding: 4rem 4rem 0 4rem;
+  margin-top: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.folders-text {
+  flex: 1;
+  max-width: 30%;
+}
+
+.folders-section .attention-text {
+  color: #c7522f;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.folders-description {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #502d19;
+}
+
+.folders-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.folder-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+
+.folder-top {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+
+.folder-contents img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(0) scale(0.8);
+  opacity: 0;
+  border-radius: 0.75rem;
+  width: 60%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease;
+  height: auto;
+  pointer-events: none;
+}
+
+.img1-projects {
+  z-index: 0;
+}
+
+.img2-projects {
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .folders-section {
+    width: 100%;
+    padding: 2rem 1.5rem 0;
+    margin-top: 3rem;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .folders-text {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .folders-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .folders-buttons .folder-btn {
+    width: 100%;
+    max-width: 290px;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .folders-buttons .folder-top img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}

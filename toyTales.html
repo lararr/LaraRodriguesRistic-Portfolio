@@ -33,6 +33,8 @@
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/highlights.css" />
+    <link rel="stylesheet" href="styles/folders.css" />
 
     <link rel="icon" type="image/png" href="assets/icons/logo.svg" />
 
@@ -41,6 +43,8 @@
 
     <script src="scripts/toyTales.js" defer></script>
     <script src="scripts/contact.js" defer></script>
+    <script src="scripts/highlights.js" defer></script>
+    <script src="scripts/folders.js" defer></script>
   </head>
 
   <body>
@@ -366,6 +370,67 @@
             <p class="learnings-photo-text">The glow up</p>
           </div>
         </section>
+      </section>
+
+      <!-- check this out section-->
+      <section class="folders-section">
+        <div class="folders-text">
+          <p class="attention-text">Make sure to check this out!</p>
+          <p class="folders-description">
+            The Playground is where I explore my passions. <br>
+            About Me is where you'll find who's the person behind the works.
+          </p>
+        </div>
+
+        <div class="folders-buttons">
+          <button class="folder-btn" data-folder="playground">
+            <div class="folder-top">
+              <img src="assets/icons/folder-full-playground.svg" alt="Playground Folder" />
+            </div>
+            <div class="folder-contents">
+              <img class="img1-projects" src="assets/photos/Playground2.webp" alt="Playground photo 1" />
+              <img class="img2-projects" src="assets/photos/Playground1.jpeg" alt="Playground photo 2" />
+            </div>
+          </button>
+
+          <button class="folder-btn" data-folder="about">
+            <div class="folder-top">
+              <img src="assets/icons/folder-full-about.svg" alt="About Me Folder" />
+            </div>
+            <div class="folder-contents">
+              <img class="img1-projects" src="assets/photos/About4.jpeg" alt="About Me photo 1" />
+              <img class="img2-projects" src="assets/photos/About2.webp" alt="About Me photo 2" />
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!--highlights section-->
+      <section class="highlights-section">
+        <div class="highlights-text">
+          <p class="attention-text">Not sure where to next?</p>
+          <h2 class="highlights-heading">Check my projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card" data-link="ditheringExperiments.html">
+            <img src="assets/photos/DitheringExp1.webp" alt="Dithering Experiments" class="project-img">
+            <h3 class="project-title">Dithering Experiments</h3>
+            <p class="project-tags">Interaction Design · Creative Coding</p>
+          </div>
+
+          <div class="project-card" data-link="tubi.html">
+            <img src="assets/photos/Tubi1.webp" alt="Tubi" class="project-img">
+            <h3 class="project-title">Tubi</h3>
+            <p class="project-tags">Exhibition Design · Interaction Design</p>
+          </div>
+
+          <div class="project-card" data-link="blaupunkt.html">
+            <img src="assets/photos/blaupunkt1.jpg" alt="Blaupunkt Pop 70 Remake" class="project-img">
+            <h3 class="project-title">Blaupunkt Pop 70 Remake</h3>
+            <p class="project-tags">Fast Prototyping · 3D Modeling</p>
+          </div>
+        </div>
       </section>
 
       <!-- Contact Section -->

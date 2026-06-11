@@ -584,6 +584,17 @@
     width: 100%;
   }
 
+  .highlights-section {
+    align-self: center;
+  }
+
+  .projects-grid{
+    align-self: center;
+  }
+
+  .highlights-text h2 {
+    font-size: 1.4rem;
+  }
 
 
 }

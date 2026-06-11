@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/highlights.css" />
+    <link rel="stylesheet" href="styles/folders.css" />
 
     <link rel="icon" href="assets/icons/logo.svg" />
 
@@ -39,6 +41,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
     <script src="scripts/blaupunkt.js" defer></script>
     <script src="scripts/contact.js" defer></script>
+    <script src="scripts/highlights.js" defer></script>
+    <script src="scripts/folders.js" defer></script>
   </head>
 
   <body>
@@ -317,6 +321,82 @@
           </ul>
         </div>
       </section>
+
+      <!-- check this out section-->
+      <section class="folders-section">
+        <div class="folders-text">
+          <p class="attention-text">Make sure to check this out!</p>
+          <p class="folders-description">
+            The Playground is where I explore my passions. <br>
+            About Me is where you'll find who's the person behind the works.
+          </p>
+        </div>
+
+        <div class="folders-buttons">
+          <button class="folder-btn" data-folder="playground">
+            <div class="folder-top">
+              <img src="assets/icons/folder-full-playground.svg" alt="Playground Folder" />
+            </div>
+            <div class="folder-contents">
+              <img class="img1-projects" src="assets/photos/Playground2.webp" alt="Playground photo 1" />
+              <img class="img2-projects" src="assets/photos/Playground1.jpeg" alt="Playground photo 2" />
+            </div>
+          </button>
+
+          <button class="folder-btn" data-folder="about">
+            <div class="folder-top">
+              <img src="assets/icons/folder-full-about.svg" alt="About Me Folder" />
+            </div>
+            <div class="folder-contents">
+              <img class="img1-projects" src="assets/photos/About4.jpeg" alt="About Me photo 1" />
+              <img class="img2-projects" src="assets/photos/About2.webp" alt="About Me photo 2" />
+            </div>
+          </button>
+        </div>
+      </section>
+
+        <!--highlights section-->
+  <section class="highlights-section">
+    <div class="highlights-text">
+      <p class="attention-text">Not sure where to next?</p>
+      <h2 class="highlights-heading">Check my projects</h2>
+    </div>
+  
+    <div class="projects-grid">
+      <!-- ToyTales -->
+      <div class="project-card" data-link="toyTales.html">
+        <img src="assets/photos/ToyTales2.webp" alt="ToyTales" class="project-img">
+        <h3 class="project-title">ToyTales -> Now Storia</h3>
+        <!-- <p class="project-desc">An AI-powered storytelling house that brings kid's favourite to life by crafting different tales in different worlds.</p> -->
+        <p class="project-tags">Product Design · Interaction Design</p>
+        <!-- <div class="card-icon">
+          <img src="assets/icons/open-new-tab.svg" alt="Open Icon">
+        </div> -->
+      </div>
+  
+      <!-- Dithering -->
+      <div class="project-card" data-link="ditheringExperiments.html">
+        <img src="assets/photos/DitheringExp1.webp" alt="Dithering Experiments" class="project-img">
+        <h3 class="project-title">Dithering Experiments</h3>
+        <!-- <p class="project-desc">An interactive art installation that mirrors its viewer through the use of digital image processing techniques.</p> -->
+        <p class="project-tags">Interaction Design · Creative Coding</p>
+        <!-- <div class="card-icon">
+          <img src="assets/icons/open-new-tab.svg" alt="Open Icon">
+        </div> -->
+      </div>
+  
+      <!-- Tubi -->
+      <div class="project-card" data-link="tubi.html">
+        <img src="assets/photos/Tubi1.webp" alt="Tubi" class="project-img">
+        <h3 class="project-title">Tubi</h3>
+        <!-- <p class="project-desc">A playful installation that delves into the boundary between reality and fiction through a colourful interactive structure.</p> -->
+        <p class="project-tags">Exhibition Design · Interaction Design</p>
+        <!-- <div class="card-icon">
+          <img src="assets/icons/open-new-tab.svg" alt="Open Icon">
+        </div> -->
+      </div>
+    </div>
+  </section>
 
 
       <!-- Contact -->

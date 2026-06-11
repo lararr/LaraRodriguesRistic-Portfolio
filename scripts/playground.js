@@ -247,13 +247,13 @@ document.getElementById('save-tool').addEventListener('click', async () => {
 
 
 // project card clicking
-// open new tab when clicking on the card
+// navigate when clicking on the card
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".project-card").forEach(card => {
     card.addEventListener("click", () => {
       const link = card.getAttribute("data-link");
       if (link) {
-        window.open(link, "_blank");
+        window.location.href = link;
       }
     });
   });
